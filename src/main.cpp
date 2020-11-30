@@ -50,7 +50,7 @@ Also see comments from Ignacio Hernandez-Ros & mispeaced under https://www.youtu
 #include <Joystick.h>
 
 Joystick_ Joystick(
-  JOYSTICK_DEFAULT_REPORT_ID, JOYSTICK_TYPE_GAMEPAD, 14, 0,
+  JOYSTICK_DEFAULT_REPORT_ID, JOYSTICK_TYPE_GAMEPAD, 16, 0,
   false, false, false, false, false, false,
   false, false, false, false, false);
 
@@ -59,7 +59,7 @@ byte pos[] = {0x80, 0x40, 0x20, 0x10, 0x08, 0x04, 0x02, 0x01};
 byte currBytes[] = {0x00, 0x00, 0x00, 0x00};
 byte prevBytes[] = {0x00, 0x00, 0x00};
 bool btnState, joyBtnState, prevJoyBtnState;
-int bit2btn[] = {-1,-1,-1,-1,-1,-1,-1,8,  -1,2,1,-1,5,7,6,5,  4,0,11,9,12,10,3,-1};              //numbers the buttons from top left to bottom right (main is D,U,press)
+int bit2btn[] = {-1,-1,-1,-1,-1,-1,-1,8,  1,2,13,-1,5,7,6,5,  4,14,11,9,12,10,3,0};              //numbers the buttons from top left to bottom right (main is D,U,press)
 
 void setup() {
   //input from wheel
