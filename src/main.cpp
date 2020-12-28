@@ -8,42 +8,42 @@
 Also see comments from Ignacio Hernandez-Ros & mispeaced under https://www.youtube.com/watch?v=CJjLUAgAFnQ
 * On Arduino Pro Micro side it must be connected as follows:
  *
- * Green -> not used (or can be connected to arduino MOSI pin 16)
- * Blue - GND -> arduino uno GND pin
- * White - MISO -> arduino uno pin 14
- * Orange – SS -> arduino uno pin 7
- * Red – SCK -> arduino uno pin 15
- * Black +VCC -> arduino +5V pin (or RAW if USB current is +5V already)
+ * Blue -> not used (or can be connected to arduino MOSI pin 16)
+ * Green - GND -> arduino uno GND pin
+ * Orange - MISO -> arduino uno pin 14
+ * White – SS -> arduino uno pin 7
+ * Grey – SCK -> arduino uno pin 15
+ * Red +VCC -> arduino +5V pin (or RAW if USB current is +5V already)
  *
 * Byte 1
- * 7 - constant 0
- * 6 - constant 1
- * 5 - constant 0
- * 4 -
- * 3 -
- * 2 -
- * 1 -
+ * 7
+ * 6
+ * 5
+ * 4
+ * 3
+ * 2
+ * 1
  * 0 - bottom right right
  *
  * Byte 2
- * 7 -
+ * 7 - righ paddle
  * 6 - top right right
  * 5 - top right left
- * 4 -
+ * 4
  * 3 - bottom left right
  * 2 - bottom right middle
  * 1 - bottom right left
- * 0 - MAIN press (down right)
+ * 0
  *
  * Byte 3
  * 7 - bottom left middle
- * 6 - top left right
- * 5 - left
- * 4 - up
- * 3 - right
- * 2 - down
+ * 6
+ * 5 - joy left
+ * 4 - joy up
+ * 3 - joy right
+ * 2 - joy down
  * 1 - bottom left left
- * 0 - constant 1
+ * 0 - paddle left
 */
 
 #include <SPI.h>
